@@ -1,2 +1,36 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<table class="table table-primary text-center bg-light mt-10 mb-10">
+   <tr>
+      <th class="h1 text text-danger" colspan="7">Products ({{ total }})</th>
+      <th style="vertical-align: middle;">
+         <a class="btn btn-success" href="/add">Add Product</a>
+         <a class="btn btn-danger" href="/drop" onclick="return confirm('Delete all products ?');">Delete All!</a>
+      </th>
+   </tr>
+   <tr class="column">
+      <th style="color: green;">Name</th>
+      <th style="color: chocolate;">Origin</th>
+      <th style="color: green;">Price</th>
+      <th style="color: chocolate;">Brand</th>
+      <th style="color: green;">Brand Origin</th>
+      <th style="color: chocolate;">Quantity</th>
+      <th style="color: green;">Image</th>
+      <th style="color:brown">Menu</th>
+   </tr>
+   {{#each toys }}
+   <tr>
+      <th>{{ name }}</th>
+      <th>{{ origin }}</th>
+      <th>${{ price }}</th>
+      <th>{{ brand }}</th>
+      <th>{{ brand_origin }}</th>
+      <th>{{ quantity }}</th>
+      <th>
+         <img class="zoom" width="300" height="200" src="{{ image }}">
+      </th>
+      <th>
+         <a class="btn btn-warning" href="/edit/{{_id}}">Edit Product</a>
+         <a class="btn btn-danger" href="/delete/{{_id}}" onclick="return confirm('Delete this toy ?');">Delete One</a>
+      </th>
+   </tr>
+   {{/each}}
+</table>
