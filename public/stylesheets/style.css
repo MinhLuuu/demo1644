@@ -64,3 +64,15 @@ label {
   display: inline-block;
   margin-right: 5px;
 }
+.description{
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+.description h2 {
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-style: italic;
+}
