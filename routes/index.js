@@ -44,7 +44,7 @@ router.get('/edit/:id', async (req, res) => {
 
 router.post('/edit/:id', async (req, res) => {
   var id = req.params.id;
-  await ToyModel.findByIdAndUpdate(id)
+  await ToyModel.findByIdAndUpdate(id, req.body)
     .then(() => { console.log('Edit toy succeed !') });
   res.redirect('/');
 })
