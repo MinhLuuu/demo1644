@@ -1,37 +1,38 @@
-<form class="bg-light text-center col-md-8 mx-auto" action="/edit/{{toys._id}}" method="post">
-   <div>
-      <h1 class="text text-primary">Edit Toy Products</h1>
-   </div>
-   <div class="form-group mt-3">
-      <label class="text text-success">Name</label>
-      <input class="form-control" type="text" name="name" value="{{ toys.name }}" required>
-   </div>
-   <div class="form-group mt-3">
-      <label class="text text-success">Origin</label>
-      <input class="form-control" type="text" name="origin" value="{{ toys.origin }}" required>
-   </div>
-   <div class="form-group mt-3">
-      <label class="text text-success">Price</label>
-      <input class="form-control" type="text" name="price" value="{{ toys.price }}" required>
-   </div>
-      <div class="form-group mt-3">
-      <label class="text text-success">Brand</label>
-      <input class="form-control" type="text" name="brand" value="{{ toys.brand }}" required>
-   </div>
-   <div class="form-group mt-3">
-      <label class="text text-success">Brand Origin</label>
-      <input class="form-control" type="text" name="brand_origin" value="{{ toys.brand_origin }}" required>
-   </div>
-   <div class="form-group mt-3">
-      <label class="text text-success">Quantity</label>
-      <input class="form-control" type="text" name="quantity" value="{{ toys.quanity }}" required>
-   </div>
-   <div class="form-group mt-3">
-      <label class="text text-success">Image</label><br>
-      <img src="{{ toys.image}}" height="250"><br>
-      <input class="form-control" type="text" name="image" value="{{ toys.image }}" required>
-   </div>
-   <div class="form-group mt-3">
-      <input class="btn btn-danger" type="submit" value="Edit">
-   </div>
-</form>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<div class="form-container">
+   <h1>Edit Toy Products</h1>
+   <form action="/edit/{{toys._id}}" method="post">
+      <div class="form-group">
+         <label>Name</label>
+         <input class="form-control" type="text" name="name" value="{{ toys.name }}" required>
+      </div>
+      <div class="form-group">
+         <label>Origin</label>
+         <input class="form-control" type="text" name="origin" value="{{ toys.origin }}" required>
+      </div>
+      <div class="form-group">
+         <label>Price</label>
+         <input class="form-control" type="text" name="price" value="{{ toys.price }}" required>
+      </div>
+      <div class="form-group">
+         <label>Brand</label>
+         <input class="form-control" type="text" name="brand" value="{{ toys.brand }}" required>
+      </div>
+      <div class="form-group">
+         <label>Brand Origin</label>
+         <input class="form-control" type="text" name="brand_origin" value="{{ toys.brand_origin }}" required>
+      </div>
+      <div class="form-group">
+         <label>Quantity</label>
+         <input class="form-control" type="text" name="quantity" value="{{ toys.quantity }}" required>
+      </div>
+      <div class="form-group">
+         <label>Image</label><br>
+         <img src="{{ toys.image }}" alt="Toy Image">
+         <input class="form-control" type="text" name="image" value="{{ toys.image }}" required>
+      </div>
+      <div class="form-group">
+         <input class="btn-admin" type="submit" value="Edit">
+      </div>
+   </form>
+</div>

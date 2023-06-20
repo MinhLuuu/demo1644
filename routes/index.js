@@ -67,9 +67,5 @@ router.post('/confirm', (req, res) => {
   res.render('confirm', { name: name, quantity: quantity, price: price, total: total });
 });
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
 module.exports = router;

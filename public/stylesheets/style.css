@@ -60,7 +60,8 @@ footer {
   background-color: cadetblue;
   width: 100%;
 }
-label {
+.label {
+  color: aqua;
   display: inline-block;
   margin-right: 5px;
 }
@@ -76,3 +77,67 @@ label {
 .description p {
   font-style: italic;
 }
+.form-container {
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #D8BFD8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: rgba(165, 42, 42, 0.625);
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #E6E6FA; /* Màu nền cho các trường nhập liệu */
+  color: #333; /* Màu chữ cho các trường nhập liệu */
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #6c757d;
+}
+
+.form-group img {
+  max-height: 250px;
+  margin-bottom: 10px;
+}
+
+.btn-admin {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-admin:hover {
+  background-color: #c82333;
+}
+
