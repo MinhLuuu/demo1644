@@ -19,15 +19,6 @@ router.get('/customer', async (req, res) => {
   res.render('customer', { toys: toys });
 })
 
-router.get('/mohinh', async (req, res) => {
-  var mohinh = await MohinhModel.find({});
-  res.render('mohinh', { mohinh: mohinh });
-})
-
-router.get('/figure', async (req, res) => {
-  var mohinh = await MohinhModel.find({});
-  res.render('figure', { mohinh: mohinh });
-})
 
 router.get('/delete/:id', async (req, res) => {
   await ToyModel.findByIdAndDelete(req.params.id)
@@ -85,6 +76,16 @@ router.post('/confirm', (req, res) => {
 
 
 //Figure:
+router.get('/mohinh', async (req, res) => {
+  var mohinh = await MohinhModel.find({});
+  res.render('mohinh', { mohinh: mohinh });
+})
+
+router.get('/figure', async (req, res) => {
+  var mohinh = await MohinhModel.find({});
+  var total1 = await MohinhModel.count();
+  res.render('figure', { mohinh: mohinh , total1: total1 });
+})
 router.get('/delete1/:id', async (req, res) => {
   await MohinhModel.findByIdAndDelete(req.params.id)
     .then(() => { console.log('Delete Toy succeed !') })
