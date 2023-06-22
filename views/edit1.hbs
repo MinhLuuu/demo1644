@@ -1,0 +1,42 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<div class="form-container">
+    <h1>Edit Figure Products</h1>
+    <form action="/edit/{{mohinh._id}}" method="post">
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" name="name" value="{{ mohinh.name }}" required>
+        </div>
+        <div class="form-group">
+            <label>Origin</label>
+            <input class="form-control" type="text" name="origin" value="{{ mohinh.origin }}" required>
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input class="form-control" type="text" name="price" value="{{ mohinh.price }}" required>
+        </div>
+        <div class="form-group">
+            <label>Brand</label>
+            <input class="form-control" type="text" name="brand" value="{{ mohinh.brand }}" required>
+        </div>
+        <div class="form-group">
+            <label>Brand Origin</label>
+            <input class="form-control" type="text" name="brand_origin" value="{{ mohinh.brand_origin }}" required>
+        </div>
+        <div class="form-group">
+            <label>Quantity</label>
+            <input class="form-control" type="text" name="quantity" value="{{ mohinh.quantity }}" required>
+        </div>
+        <div class="form-group">
+            <label>Image</label><br>
+            <img src="{{ mohinh.image }}" alt="Toy Image">
+            <input class="form-control" type="text" name="image" value="{{ mohinh.image }}" required>
+        </div>
+        <div class="form-group">
+            <label>Date</label>
+            <input class="form-control" type="date" name="quantity" value="{{ mohinh.quantity }}" required>
+        </div>
+        <div class="form-group">
+            <input class="btn-admin" type="submit" value="Edit">
+        </div>
+    </form>
+</div>

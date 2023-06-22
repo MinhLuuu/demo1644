@@ -1,0 +1,18 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<div class="description">
+   <h2>Welcome to Life Of Toys</h2>
+   <p>We are a children's toy store. We feel honored that you have visited our store. If your child is harassing you to work , use our products . We guarantee your child will sit quietly. Thank you for your time here.</p>
+</div>
+<ul class="product-list">
+   {{#each mohinh}}
+   <li class="product-item">
+      <div class="card mb-4 box-shadow">
+         <img class="card-img-top" src="{{image}}">
+         <div class="card-body">
+            <h4 class="card-title">{{name}} - {{price}}$</h4>
+         </div>
+         <a class="btn" href="/order/{{ _id }}">Buy</a>
+      </div>
+   </li>
+   {{/each}}
+</ul>
