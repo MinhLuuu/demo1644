@@ -18,10 +18,11 @@ header {
 main {
   flex: 1;
 }
-
 footer {
   background-color: bisque;
   margin-top: auto;
+  margin-bottom: 0;
+  height: 90px;
 }
 
 .product-list {
