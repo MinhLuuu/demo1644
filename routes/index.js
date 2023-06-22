@@ -4,6 +4,11 @@ var router = express.Router();
 
 router.get('/', async (req, res) => {
   var toys = await ToyModel.find({});
+  res.render('customer', { toys: toys})
+})
+
+router.get('/index', async (req, res) => {
+  var toys = await ToyModel.find({});
   var total = await ToyModel.count();
   res.render('index', { toys: toys, total: total })
 })
