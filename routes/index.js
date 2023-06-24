@@ -63,7 +63,6 @@ router.get('/order/:id', async (req, res) => {
 
 router.post('/confirm', (req, res) => {
   var order = req.body;
-  var image = order.image;
   var name = order.name;
   var quantity = order.quantity;
   var price = order.price;
@@ -122,7 +121,21 @@ router.post('/edit1/:id', async (req, res) => {
   res.redirect('/');
 })
 
+router.get('/order1/:id', async (req, res) => {
+  var mohinh = await MohinhModel.findById(req.params.id);
+  res.render('order1', { mohinh: mohinh })
+})
 
-
+router.post('/confirm1', (req, res) => {
+  var order = req.body;
+  var name = order.name;
+  var quantity = order.quantity;
+  var price = order.price;
+  var total = price * quantity;
+  console.log("Toy Name: " + name);
+  console.log("Order quantity : " + quantity);
+  console.log("Total price: " + total);
+  res.render('confirm1', { name: name, quantity: quantity, price: price, total: total });
+});
 
 module.exports = router;

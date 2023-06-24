@@ -1,0 +1,47 @@
+<div class="container col-md-8 mt-3 mb-3">
+    <div class="row">
+        <div class="col">
+            <h1>{{ mohinh.name }}</h1>
+            <img  width="350" height="250" src="{{ mohinh.image }}">
+        </div>
+        <div class="col">
+            <table class="table table-bordered">
+                <tr>
+                    <th colspan="2">FIGURE INFORMATION</th>
+                </tr>
+                <tr>
+                    <th>Figure Origin</th>
+                    <td>{{ mohinh.origin }}</td>
+                </tr>
+                <tr>
+                    <th>Figure Price</th>
+                    <td>{{ mohinh.price }}</td>
+                </tr>
+                <tr>
+                    <th>Figure Brand</th>
+                    <td>{{ mohinh.brand }}</td>
+                </tr>
+                <tr>
+                    <th>Figure Brand Origin</th>
+                    <td>{{ mohinh.brand_origin }}</td>
+                </tr>
+                <tr>
+                    <th>In stock</th>
+                    <td>{{ mohinh.quantity }}</td>
+                </tr>
+                <tr class="text-center">
+                    <th colspan="2">
+                        <form action="/confirm1" method="post">
+                            <input type="hidden" name="name" value="{{ mohinh.name }}">
+                            <input type="hidden" name="price" value="{{ mohinh.price }}">
+                            <label for="quantity">Quantity:</label>
+                            <input style="align-items: start;" type="number" name="quantity" min="1" max="{{mohinh.quantity}}" required>
+                            <input type="submit" class="btn btn-primary" value="ORDER"></input>
+                            <input type="hidden" name="image" value="{{ mohinh.image }}">
+                        </form>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

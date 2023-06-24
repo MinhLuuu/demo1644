@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='/stylesheets/style.css' />
 <div class="form-container">
     <h1>Edit Figure Products</h1>
-    <form action="/edit/{{mohinh._id}}" method="post">
+    <form action="/edit1/{{mohinh._id}}" method="post">
         <div class="form-group">
             <label>Name</label>
             <input class="form-control" type="text" name="name" value="{{ mohinh.name }}" required>
@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             <label>Date</label>
-            <input class="form-control" type="date" name="quantity" value="{{ mohinh.quantity }}" required>
+            <input class="form-control" type="date" name="date" value="{{ mohinh.date }}" required>
         </div>
         <div class="form-group">
             <input class="btn-admin" type="submit" value="Edit">
